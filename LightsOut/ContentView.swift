@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  NullaLux
+//  LightsOut
 //
 //  Created by Daniel Ian on 27/05/25.
 //

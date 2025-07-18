@@ -19,7 +19,7 @@ struct HomeView: View {
                     .ignoresSafeArea()
                 VStack {
                     Spacer()
-                    Text("NullaLux")
+                    Text("LightsOut")
                         .font(.system(size: DeviceUtils.isPhone(sizeClass: sizeClass) ? 60 : 148, weight: .bold))
                         .foregroundStyle(.white)
                         .opacity(isVisible ? 1 : 0.2)
