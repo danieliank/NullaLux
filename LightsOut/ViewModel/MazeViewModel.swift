@@ -20,7 +20,7 @@ class MazeViewModel: ObservableObject {
     @Published var navigateToEnd = false
     @Published var horizontalSizeClass: UserInterfaceSizeClass?
     @Published var score: Int = 0
-    @Published var resetCountdown: Bool = false  // Triggers timer reset
+    @Published var resetCountdown: Bool = false
     
     init(width: Int, height: Int, sizeClass: UserInterfaceSizeClass? = nil) {
         self.width = width

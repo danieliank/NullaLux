@@ -33,7 +33,6 @@ struct EndView: View {
                     .frame(maxWidth: DeviceUtils.isPhone(sizeClass: sizeClass) ? 300 : 700)
                 
                 if DeviceUtils.isPhone(sizeClass: sizeClass) {
-                    // Stack buttons vertically on iPhone
                     VStack(spacing: 20) {
                         Button(action: restartAction) {
                             Text("Restart")
@@ -59,7 +58,6 @@ struct EndView: View {
                         }
                     }
                 } else {
-                    // Original horizontal layout for iPad
                     HStack(spacing: 50) {
                         Button(action: restartAction) {
                             Text("Restart")

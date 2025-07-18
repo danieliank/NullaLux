@@ -26,7 +26,6 @@ struct PauseOverlay: View {
                     .multilineTextAlignment(.center)
                 
                 if DeviceUtils.isPhone(sizeClass: sizeClass) {
-                    // Stack buttons vertically on iPhone
                     VStack(spacing: 20) {
                         Button(action: resumeAction) {
                             HStack {
@@ -71,7 +70,6 @@ struct PauseOverlay: View {
                         }
                     }
                 } else {
-                    // Horizontal layout for iPad
                     VStack(spacing: 30) {
                         Button(action: resumeAction) {
                             HStack {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameOverView: View {
-    let score: Int                          // ✅ Add score here
+    let score: Int
     let backToHomeAction: () -> Void
     
     @Environment(\.horizontalSizeClass) private var sizeClass
@@ -30,7 +30,6 @@ struct GameOverView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: DeviceUtils.isPhone(sizeClass: sizeClass) ? 300 : 700)
 
-                // ✅ Show score
                 Text("Score: \(score)")
                     .font(.system(size: DeviceUtils.isPhone(sizeClass: sizeClass) ? 24 : 50))
                     .foregroundColor(.white)
