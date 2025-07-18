@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		6A9A7B272DE5B1A600EA5314 /* NullaLux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NullaLux.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A9A7B272DE5B1A600EA5314 /* LightsOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightsOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		6A9A7B292DE5B1A600EA5314 /* NullaLux */ = {
+		6A9A7B292DE5B1A600EA5314 /* LightsOut */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NullaLux;
+			path = LightsOut;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		6A9A7B1E2DE5B1A600EA5314 = {
 			isa = PBXGroup;
 			children = (
-				6A9A7B292DE5B1A600EA5314 /* NullaLux */,
+				6A9A7B292DE5B1A600EA5314 /* LightsOut */,
 				6A9A7B282DE5B1A600EA5314 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		6A9A7B282DE5B1A600EA5314 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A9A7B272DE5B1A600EA5314 /* NullaLux.app */,
+				6A9A7B272DE5B1A600EA5314 /* LightsOut.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6A9A7B262DE5B1A600EA5314 /* NullaLux */ = {
+		6A9A7B262DE5B1A600EA5314 /* LightsOut */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A9A7B322DE5B1A700EA5314 /* Build configuration list for PBXNativeTarget "NullaLux" */;
+			buildConfigurationList = 6A9A7B322DE5B1A700EA5314 /* Build configuration list for PBXNativeTarget "LightsOut" */;
 			buildPhases = (
 				6A9A7B232DE5B1A600EA5314 /* Sources */,
 				6A9A7B242DE5B1A600EA5314 /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				6A9A7B292DE5B1A600EA5314 /* NullaLux */,
+				6A9A7B292DE5B1A600EA5314 /* LightsOut */,
 			);
-			name = NullaLux;
+			name = LightsOut;
 			packageProductDependencies = (
 			);
 			productName = NullaLux;
-			productReference = 6A9A7B272DE5B1A600EA5314 /* NullaLux.app */;
+			productReference = 6A9A7B272DE5B1A600EA5314 /* LightsOut.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6A9A7B222DE5B1A600EA5314 /* Build configuration list for PBXProject "NullaLux" */;
+			buildConfigurationList = 6A9A7B222DE5B1A600EA5314 /* Build configuration list for PBXProject "LightsOut" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6A9A7B262DE5B1A600EA5314 /* NullaLux */,
+				6A9A7B262DE5B1A600EA5314 /* LightsOut */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +305,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6A9A7B222DE5B1A600EA5314 /* Build configuration list for PBXProject "NullaLux" */ = {
+		6A9A7B222DE5B1A600EA5314 /* Build configuration list for PBXProject "LightsOut" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A9A7B302DE5B1A700EA5314 /* Debug */,
@@ -314,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A9A7B322DE5B1A700EA5314 /* Build configuration list for PBXNativeTarget "NullaLux" */ = {
+		6A9A7B322DE5B1A700EA5314 /* Build configuration list for PBXNativeTarget "LightsOut" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A9A7B332DE5B1A700EA5314 /* Debug */,
