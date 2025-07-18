@@ -46,8 +46,8 @@ struct GameStoryView: View {
                             .scaleEffect(DeviceUtils.isPhone(sizeClass: sizeClass) ? 3 : 4)
                             .transition(.scale)
                     } else {
-                        Image("DoorOpen")
-                            .scaleEffect(DeviceUtils.isPhone(sizeClass: sizeClass) ? 1.5 : 2)
+                        DoorView(isOpen: true)
+                            .scaleEffect(2)
                             .transition(.scale)
                     }
                     

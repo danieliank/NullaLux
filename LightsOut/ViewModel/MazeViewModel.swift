@@ -174,8 +174,7 @@ class MazeViewModel: ObservableObject {
                 .frame(width: size, height: size)
 
             if Point(x: col, y: row) == finish {
-                Image(itemCollected ? "DoorOpen" : "DoorClose")
-                    .scaleEffect(isPhone ? 0.1 : 0.2)
+                DoorView(isOpen: itemCollected)
             }
 
             if Point(x: col, y: row) == player {
@@ -206,3 +205,6 @@ class MazeViewModel: ObservableObject {
     }
 }
 
+#Preview {
+    MazeView()
+}

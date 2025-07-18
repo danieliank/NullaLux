@@ -63,13 +63,13 @@ struct HowtoView: View {
                             .frame(width: DeviceUtils.isPhone(sizeClass: sizeClass) ? 60 : 80,
                                    height: DeviceUtils.isPhone(sizeClass: sizeClass) ? 60 : 80)
                             .foregroundStyle(.black)
-                        Image("DoorClose")
-                            .scaleEffect(DeviceUtils.isPhone(sizeClass: sizeClass) ? 1.5 : 2)
+                        DoorView(isOpen: false)
+                            .scaleEffect(DeviceUtils.isPhone(sizeClass: sizeClass) ? 3 : 4)
                     }
+                    
                     VStack(alignment: .leading, spacing: DeviceUtils.isPhone(sizeClass: sizeClass) ? 5 : 10) {
                         Text("Door")
                             .font(.system(size: DeviceUtils.isPhone(sizeClass: sizeClass) ? 24 : 40, weight: .bold))
-
                         Text("This is your final goal! Reach the door after collecting the key to win the game.")
                             .font(.system(size: DeviceUtils.isPhone(sizeClass: sizeClass) ? 16 : 32))
                     }
@@ -124,4 +124,8 @@ struct HowtoView: View {
         .background(Color.black.ignoresSafeArea())
         .foregroundColor(.white)
     }
+}
+
+#Preview {
+    HowtoView()
 }
