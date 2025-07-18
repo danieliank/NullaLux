@@ -5,6 +5,7 @@ struct MazeView: View {
     @State private var showOverlay = false
     @State private var showPauseOverlay = false
     @State private var navigateToHome = false
+    @State private var showGameOverOverlay = false
     @Environment(\.horizontalSizeClass) private var sizeClass
 
     init() {
@@ -17,20 +18,26 @@ struct MazeView: View {
                 Color.black
                     .scaledToFill()
                     .ignoresSafeArea()
-
                 VStack {
+                    CountdownBar(reset: $viewModel.resetCountdown) {
+                        showGameOverOverlay = true
+                    }
+
+                    .ignoresSafeArea()
                     HStack {
-                        Spacer()
+                        Spacer().frame(width: 300)
                         Button(action: { showPauseOverlay = true }) {
                             Image(systemName: "pause.fill")
                                 .resizable()
                                 .frame(width: DeviceUtils.isPhone(sizeClass: sizeClass) ? 28 : 42,
                                        height: DeviceUtils.isPhone(sizeClass: sizeClass) ? 32 : 48)
                                 .foregroundColor(.white)
-                                .padding()
                         }
-                        Spacer()
                     }
+                    Text("Score: \(viewModel.score)")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .padding()
                     Spacer()
                     GridStack(rows: viewModel.height, cols: viewModel.width) { row, col in
                         ZStack {
@@ -82,6 +89,7 @@ struct MazeView: View {
                     }
                     .padding()
                 }
+//                .ignoresSafeArea()
                 .onAppear {
                     viewModel.horizontalSizeClass = sizeClass
                     viewModel.generateMaze()
@@ -114,6 +122,14 @@ struct MazeView: View {
                         },
                         resumeAction: {
                             showPauseOverlay = false
+                        }
+                    )
+                }
+                if showGameOverOverlay {
+                    GameOverView(
+                        score: viewModel.score,             // ✅ Pass score
+                        backToHomeAction: {
+                            navigateToHome = true
                         }
                     )
                 }

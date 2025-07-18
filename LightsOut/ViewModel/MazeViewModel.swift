@@ -19,6 +19,8 @@ class MazeViewModel: ObservableObject {
     @Published var playerDirection: Direction = .right
     @Published var navigateToEnd = false
     @Published var horizontalSizeClass: UserInterfaceSizeClass?
+    @Published var score: Int = 0
+    @Published var resetCountdown: Bool = false  // Triggers timer reset
     
     init(width: Int, height: Int, sizeClass: UserInterfaceSizeClass? = nil) {
         self.width = width
@@ -33,6 +35,12 @@ class MazeViewModel: ObservableObject {
 
     func updateSizeClass(_ sizeClass: UserInterfaceSizeClass?) {
         self.horizontalSizeClass = sizeClass
+    }
+    
+    func playerReachedExit() {
+        score += 1
+        navigateToEnd = true
+        resetCountdown = true
     }
     
     func generateMaze() {
@@ -145,8 +153,11 @@ class MazeViewModel: ObservableObject {
         }
 
         if player == finish && itemCollected {
-            navigateToEnd = true
+            DispatchQueue.main.async {
+                self.playerReachedExit()
+            }
         }
+
 
     }
 
