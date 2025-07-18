@@ -23,7 +23,7 @@ struct HowtoView: View {
                             .frame(width: DeviceUtils.isPhone(sizeClass: sizeClass) ? 60 : 80,
                                    height: DeviceUtils.isPhone(sizeClass: sizeClass) ? 60 : 80)
                             .foregroundStyle(.black)
-                        PlayerView()
+                        PlayerView(direction: .right)
                             .scaleEffect(DeviceUtils.isPhone(sizeClass: sizeClass) ? 2 : 3)
                     }
                     

@@ -14,6 +14,11 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            ZStack{
+                Rectangle().foregroundStyle(.black)
+                PlayerView(direction: .down)
+            }
+            
         }
         .padding()
     }

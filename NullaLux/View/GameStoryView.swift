@@ -38,7 +38,7 @@ struct GameStoryView: View {
                     Spacer()
                     
                     if textIndex < 2 {
-                        PlayerView()
+                        PlayerView(direction: .right)
                             .scaleEffect(DeviceUtils.isPhone(sizeClass: sizeClass) ? 2 : 3)
                             .transition(.scale)
                     } else if textIndex < 4 {

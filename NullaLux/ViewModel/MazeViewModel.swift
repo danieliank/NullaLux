@@ -115,8 +115,12 @@ class MazeViewModel: ObservableObject {
     @MainActor func movePlayer(direction: Direction) {
         let newPoint: Point
         switch direction {
-        case .up: newPoint = Point(x: player.x, y: player.y - 1)
-        case .down: newPoint = Point(x: player.x, y: player.y + 1)
+        case .up:
+            newPoint = Point(x: player.x, y: player.y - 1)
+            playerDirection = .up
+        case .down:
+            newPoint = Point(x: player.x, y: player.y + 1)
+            playerDirection = .down
         case .left:
             newPoint = Point(x: player.x - 1, y: player.y)
             playerDirection = .left
@@ -171,14 +175,12 @@ class MazeViewModel: ObservableObject {
 
             if Point(x: col, y: row) == finish {
                 Image(itemCollected ? "DoorOpen" : "DoorClose")
-                    .scaleEffect(isPhone ? 0.6 : 1.2)
-                    .offset(y: isPhone ? 2.5 : 5)
+                    .scaleEffect(isPhone ? 0.1 : 0.2)
             }
 
             if Point(x: col, y: row) == player {
-                PlayerView()
+                PlayerView(direction: playerDirection)
                     .scaleEffect(isPhone ? 0.75 : 1.5)
-                    .scaleEffect(x: playerDirection == .left ? -1 : 1, y: 1)
             }
         }
     }

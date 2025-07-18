@@ -35,6 +35,7 @@ struct MazeView: View {
 
                             if Point(x: col, y: row) == viewModel.itemLocation && !viewModel.itemCollected {
                                 viewModel.getItem()
+                                    .frame(width: DeviceUtils.isPhone(sizeClass: sizeClass) ? 30 : 60, height: DeviceUtils.isPhone(sizeClass: sizeClass) ? 30 : 60)
                             }
                         }
                     }

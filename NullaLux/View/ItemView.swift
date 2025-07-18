@@ -10,7 +10,7 @@ import SwiftUI
 struct ItemView: View {
     let spriteSheet = UIImage(named: "Key")!
     let frameCount = 6
-    let frameSize = CGSize(width: 16, height: 16)
+    let frameSize = CGSize(width: 80, height: 129)
     
     @State private var currentFrame = 0
 
@@ -18,6 +18,7 @@ struct ItemView: View {
         TimelineView(.animation) { context in
             Image(uiImage: cropFrame(index: currentFrame))
                 .resizable()
+                .scaleEffect(0.25)
                 .frame(width: frameSize.width, height: frameSize.height)
                 .onAppear {
                     startAnimation()
@@ -26,8 +27,8 @@ struct ItemView: View {
     }
 
     func cropFrame(index: Int) -> UIImage {
-        let yOffset = CGFloat(index) * frameSize.height
-        let cropRect = CGRect(x: 0, y: yOffset, width: frameSize.width, height: frameSize.height)
+        let xOffset = CGFloat(index) * frameSize.width
+        let cropRect = CGRect(x: xOffset, y: 0, width: frameSize.width, height: frameSize.height)
         let cgImage = spriteSheet.cgImage!.cropping(to: cropRect)!
         return UIImage(cgImage: cgImage)
     }
