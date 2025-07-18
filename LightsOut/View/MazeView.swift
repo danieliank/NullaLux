@@ -20,6 +20,7 @@ struct MazeView: View {
                     .ignoresSafeArea()
                 VStack {
                     CountdownBar(reset: $viewModel.resetCountdown) {
+                        AudioManager.shared.playSound(.exit)
                         showGameOverOverlay = true
                     }
 

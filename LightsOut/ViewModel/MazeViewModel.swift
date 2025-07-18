@@ -139,13 +139,15 @@ class MazeViewModel: ObservableObject {
 
         if isValidMove(to: newPoint) {
             player = newPoint
-
+            AudioManager.shared.playSound(.move)
             if !itemCollected && player == itemLocation {
+                AudioManager.shared.playSound(.pickup)
                 itemCollected = true
             }
         } else {
             withAnimation(.default) {
                 shakeTrigger += 1
+                AudioManager.shared.playSound(.shake)
             }
 
             let generator = UINotificationFeedbackGenerator()
@@ -157,7 +159,6 @@ class MazeViewModel: ObservableObject {
                 self.playerReachedExit()
             }
         }
-
 
     }
 
