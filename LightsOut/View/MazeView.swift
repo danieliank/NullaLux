@@ -23,7 +23,7 @@ struct MazeView: View {
                 .ignoresSafeArea(edges: .top)
 
                 VStack {
-                    MazeHeaderView(viewModel: viewModel, showGameOverOverlay: $showGameOverOverlay)
+                    MazeHeaderView(viewModel: viewModel, showPauseOverlay: $showPauseOverlay)
                     Spacer()
                     MazeGridView(viewModel: viewModel, sizeClass: sizeClass)
                     Spacer()

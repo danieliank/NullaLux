@@ -9,13 +9,13 @@ import SwiftUI
 
 struct MazeHeaderView: View {
     @ObservedObject var viewModel: MazeViewModel
-    @Binding var showGameOverOverlay: Bool
+    @Binding var showPauseOverlay: Bool
 
     var body: some View {
         VStack {
             HStack {
                 Spacer().frame(width: 300)
-                Button(action: { showGameOverOverlay = true }) {
+                Button(action: { showPauseOverlay = true }) {
                     Image(systemName: "pause.fill")
                         .resizable()
                         .frame(width: 32, height: 48)
